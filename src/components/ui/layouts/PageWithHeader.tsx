@@ -1,4 +1,5 @@
 import { useAuthState } from '@/components/contexts/AuthContext';
+import { Page } from '@/components/pages/shared/Page';
 import { logout } from '@/features/auth/api/logout';
 import { Button } from '@chakra-ui/button';
 import { Box, Flex, Spacer } from '@chakra-ui/layout';
@@ -6,10 +7,10 @@ import { memo, ReactNode, useCallback } from 'react';
 
 export const PageWithHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
+    <Page>
       <Header></Header>
       {children}
-    </div>
+    </Page>
   );
 };
 

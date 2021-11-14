@@ -23,28 +23,26 @@ export function LoginPage() {
   }
 
   return (
-    <Page>
-      <PageWithHeader>
-        {state.name === 'UNKNOWN' && <Loading></Loading>}
-        <Container p={8}>
-          <Heading>ログイン</Heading>
-          <FormControl mt={4} id="email">
-            <FormLabel>メールアドレス</FormLabel>
-            <Input value={email} onChange={setEmail} type="email" />
-          </FormControl>
-          <Box mt={2}>
-            <Button
-              isLoading={isSending}
-              onClick={handleLoginButtonClick}
-              isDisabled={!isValid}
-              colorScheme="teal"
-              isFullWidth
-            >
-              ログイン
-            </Button>
-          </Box>
-        </Container>
-      </PageWithHeader>
-    </Page>
+    <PageWithHeader>
+      {state.name === 'UNKNOWN' && <Loading></Loading>}
+      <Container p={8}>
+        <Heading>ログイン</Heading>
+        <FormControl mt={4} id="email">
+          <FormLabel>メールアドレス</FormLabel>
+          <Input value={email} onChange={setEmail} type="email" />
+        </FormControl>
+        <Box mt={2}>
+          <Button
+            isLoading={isSending}
+            onClick={handleLoginButtonClick}
+            isDisabled={!isValid}
+            colorScheme="teal"
+            isFullWidth
+          >
+            ログイン
+          </Button>
+        </Box>
+      </Container>
+    </PageWithHeader>
   );
 }
